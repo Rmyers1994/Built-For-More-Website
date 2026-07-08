@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Built For More USA&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--navy: #1B2A4A;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--gold: #B8963E;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--white: #FFFFFF;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--black: #0A0A0A;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--light: #F5F2EA;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--navy);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: min(1120px, 90%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 28px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(184, 150, 62, 0.35);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 1.5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-links {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 110px 0 90px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.eyebrow {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(3rem, 7vw, 6.5rem);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 0.95;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 950px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: -3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 680px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(255,255,255,0.86);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 38px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.buttons {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 15px 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: 0.25s ease;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.88;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-secondary {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-secondary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(184, 150, 62, 0.12);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 80px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-light {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--light);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(2rem, 4vw, 3.6rem);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.05;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 780px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: -1.5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-copy {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 700px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(10,10,10,0.75);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dark-copy {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(255,255,255,0.78);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cards {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(4, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 46px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(184, 150, 62, 0.45);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 240px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.03);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-light .card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.15rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(255,255,255,0.76);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.98rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-light .card p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(10,10,10,0.72);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.statement {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 900px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.statement h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: clamp(2.4rem, 5vw, 5rem);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: -2px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.statement p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(255,255,255,0.78);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.calculator-preview {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 48px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.calculator-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--black);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 34px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 6px solid var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.calculator-box h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.calculator-box p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(10,10,10,0.72);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mini-link {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.newsletter {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid rgba(184,150,62,0.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(184,150,62,0.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.newsletter p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 650px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto 30px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(255,255,255,0.78);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 34px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(255,255,255,0.65);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer .container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid rgba(184,150,62,0.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-top: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 900px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.cards,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.calculator-preview {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.nav-links {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 80px 0 70px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>.cards,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.calculator-preview {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>footer .container {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo"&gt;BUILT FOR MORE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#calculators"&gt;Calculators&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#newsletter"&gt;Newsletter&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="#mission"&gt;Mission&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="eyebrow"&gt;Financial tools for first responders&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Work because you want to. Not because you have to.&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Built For More helps first responders understand pensions, 457 plans,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>DROP, overtime, and retirement decisions — without financial jargon</p>
+<p class="p1"><span class="Apple-converted-space">          </span>or Wall Street fluff.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="buttons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn btn-primary" href="#calculators"&gt;Start With the Calculators&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn btn-secondary" href="#newsletter"&gt;Join the Newsletter&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="section-light" id="mission"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Built for the ones who give everything.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-copy"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>This is practical financial education for firefighters, police officers,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>EMS, corrections, dispatchers, and public servants who want to make the</p>
+<p class="p1"><span class="Apple-converted-space">          </span>most of the benefits they earned.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="cards"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Pension Clarity&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Understand how years of service, age, benefit formulas, and timing can impact your retirement.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;457 Growth&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;See how small payroll contributions can become serious long-term wealth through compound growth.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;DROP Planning&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Compare retirement timing and DROP scenarios before making major career decisions.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Overtime Strategy&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Use extra income with purpose — without letting the job take everything from you.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container statement"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;This is not about pinching pennies forever.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>It’s about buying the truck and funding your 457. Taking the vacation</p>
+<p class="p1"><span class="Apple-converted-space">          </span>and having a plan. Living fully now while building freedom for later.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="section-light" id="calculators"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Try the Built For More calculators.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="section-copy"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Simple, clean tools designed to help first responders see the numbers</p>
+<p class="p1"><span class="Apple-converted-space">          </span>clearly and make smarter decisions.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="calculator-preview"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="calculator-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;457 Calculator&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Estimate how your paycheck contributions can grow over time.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="mini-link" href="#"&gt;Launch Calculator →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="calculator-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Pension Calculator&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Estimate your retirement income based on years of service and benefit assumptions.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="mini-link" href="#"&gt;Launch Calculator →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="calculator-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;DROP Calculator&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Compare possible DROP outcomes and retirement timing scenarios.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="mini-link" href="#"&gt;Coming Soon →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="calculator-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Overtime Calculator&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;See how overtime can support investing, savings, and family goals.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="mini-link" href="#"&gt;Coming Soon →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="newsletter" id="newsletter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="eyebrow"&gt;Join the newsletter&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title" style="margin-left:auto;margin-right:auto;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Learn how to use the benefits you already earned.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Get practical breakdowns on pensions, 457s, DROP, overtime, budgeting,</p>
+<p class="p1"><span class="Apple-converted-space">          </span>retirement planning, and building a better life outside the job.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a class="btn btn-primary" href="#"&gt;Join the Newsletter&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;© 2026 Built For More USA&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;@BuiltForMoreUSA&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
