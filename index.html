@@ -4,26 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Built For More — Financial Education for First Responders</title>
-<meta name="description" content="Free pension, DROP, and 457(b) tools built by an active-duty firefighter. Know your number. Understand the benefits you already earned.">
+<meta name="description" content="Free pension, DROP, and 457 tools built by an active-duty firefighter. Know your number. Understand the benefits you already earned.">
 
 <!-- ============================================================
      BFM_CONFIG — the only block you need to touch.
      1) KIT_FORM_ID: from Kit → Grow → Landing Pages & Forms →
-        your form → Embed → the number in the embed code URL.
+        your form → the number in the URL / embed code.
      2) TOOL_URLS: paste the live URL for each tool.
         Leave a URL as "" and that card shows "temporarily offline"
         instead of a dead link.
+     3) DOWNLOAD_URLS: the PDFs in this repo. Filenames must match
+        exactly (lowercase, hyphens, no spaces).
 ============================================================ -->
 <script>
 const BFM_CONFIG = {
-  /* Numeric form ID from Kit (see README). When filled in, signups happen
-     inline on this page. Until then, forms open KIT_LANDING_URL instead. */
+  /* Numeric form ID from Kit. When filled in, signups happen
+     inline on this page. Until then, downloads still unlock,
+     but emails are NOT captured — fill this in. */
   KIT_FORM_ID: "",
   KIT_LANDING_URL: "https://builtformoreusa.kit.com/0a7a668d3c",
   TOOL_URLS: {
     pension:   "https://pension.builtformoreusa.com",
     drop:      "https://dropdecisioncalculator.builtformoreusa.com",
     crossover: "https://457vsot.builtformoreusa.com"
+  },
+  DOWNLOAD_URLS: {
+    checklist: "/retirement-checklist.pdf",
+    preplan:   "/family-pre-plan.pdf"
   }
 };
 </script>
@@ -71,7 +78,6 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(12,20,34,.92);backd
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(217,162,27,.7)}
 .btn-ghost{background:transparent;color:#F1E7CF;border:1.5px solid rgba(241,231,207,.35)}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.btn-nav{padding:11px 20px;font-size:12.5px}
 .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .menu-btn svg{width:26px;height:26px;stroke:#F1E7CF}
 
@@ -113,42 +119,35 @@ section{padding:96px 0}
 .tool .ic{width:52px;height:52px;margin:24px 0 18px;color:var(--navy)}
 .tool .ic svg{width:100%;height:100%}
 .tool h3{font-size:24px;font-weight:600;margin-bottom:6px}
-.tool .hook{font-size:16.5px;color:var(--gold-lo);font-weight:600;margin-bottom:10px;font-family:'Caveat',cursive;font-size:21px;line-height:1.2}
+.tool .hook{color:var(--gold-lo);font-weight:600;margin-bottom:10px;font-family:'Caveat',cursive;font-size:21px;line-height:1.2}
 .tool p{color:var(--muted);font-size:15.5px;flex:1}
-.tool .go{margin-top:26px;display:inline-flex;align-items:center;gap:10px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:14px;font-weight:600;color:var(--navy);text-decoration:none;padding:14px 20px;border-radius:6px;background:var(--navy);color:#F1E7CF;justify-content:center;transition:background .18s,transform .18s}
+.tool .go{margin-top:26px;display:inline-flex;align-items:center;gap:10px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:14px;font-weight:600;text-decoration:none;padding:14px 20px;border-radius:6px;background:var(--navy);color:#F1E7CF;justify-content:center;transition:background .18s,transform .18s}
 .tool .go:hover{background:var(--navy-3);transform:translateY(-1px)}
 .tool .go svg{width:16px;height:16px;transition:transform .18s}
 .tool .go:hover svg{transform:translateX(4px)}
 .tool .go.offline{background:transparent;color:var(--muted);border:1.5px dashed var(--line);cursor:default;pointer-events:none}
-.tool.guide-card{background:var(--navy);border-color:var(--line-d)}
-.tool.guide-card h3{color:#FCFBF8}
-.tool.guide-card p{color:var(--muted-d)}
-.tool.guide-card .ic{color:var(--gold)}
-.tool.guide-card .go{background:linear-gradient(135deg,var(--gold-hi),var(--gold-lo));color:var(--navy)}
 .privacy-note{margin-top:36px;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14.5px}
 .privacy-note svg{width:18px;height:18px;flex:none;color:var(--gold-lo)}
 
-/* ---------- guide / checklist ---------- */
-#guide{background:var(--navy);color:#F1E7CF;position:relative;overflow:hidden}
-#guide .wm{position:absolute;left:-200px;bottom:-200px;width:560px;height:560px;opacity:.05;pointer-events:none}
-.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;position:relative}
-.guide-copy .eyebrow{color:var(--gold)}
-.guide-copy h2{font-size:clamp(32px,4.4vw,48px);font-weight:600;color:#FCFBF8;margin:14px 0 18px}
-.guide-copy p{color:var(--muted-d);font-size:17px;margin-bottom:14px}
-.guide-copy ul{list-style:none;margin:22px 0 0}
-.guide-copy li{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;font-size:16px;color:#DCD6C8}
-.guide-copy li svg{width:19px;height:19px;flex:none;margin-top:3px;color:var(--gold)}
-.doc-visual{position:relative;justify-self:center}
-.doc{width:min(340px,80vw);background:var(--paper);color:var(--ink);border-radius:10px;padding:30px 28px;box-shadow:0 30px 70px -20px rgba(0,0,0,.55);transform:rotate(-2deg)}
-.doc .doc-bar{height:6px;width:56px;background:linear-gradient(90deg,var(--gold-hi),var(--gold-lo));border-radius:3px;margin-bottom:18px}
-.doc h4{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:19px;line-height:1.2;margin-bottom:4px}
-.doc .doc-sub{font-size:12.5px;color:var(--muted);margin-bottom:20px}
-.doc .row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.doc .box{width:15px;height:15px;border:2px solid var(--navy);border-radius:3px;flex:none;position:relative}
-.doc .box.done{background:var(--gold);border-color:var(--gold-lo)}
-.doc .box.done::after{content:"";position:absolute;inset:2px 3px;border-left:2.5px solid var(--navy);border-bottom:2.5px solid var(--navy);transform:rotate(-48deg) translateY(-1px)}
-.doc .ln{height:9px;border-radius:5px;background:rgba(20,24,33,.14)}
-.doc .badge-free{position:absolute;top:-16px;right:-14px;background:linear-gradient(135deg,var(--gold-hi),var(--gold-lo));color:var(--navy);font-family:'Caveat',cursive;font-weight:700;font-size:23px;padding:8px 18px;border-radius:40px;transform:rotate(6deg);box-shadow:0 10px 24px -8px rgba(0,0,0,.5)}
+/* ---------- downloads ---------- */
+#downloads{background:var(--navy);color:#F1E7CF;position:relative;overflow:hidden}
+#downloads .wm{position:absolute;left:-200px;bottom:-200px;width:560px;height:560px;opacity:.05;pointer-events:none}
+.dl-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:start;position:relative}
+.dl-copy .eyebrow{color:var(--gold)}
+.dl-copy h2{font-size:clamp(32px,4.4vw,48px);font-weight:600;color:#FCFBF8;margin:14px 0 18px}
+.dl-copy p{color:var(--muted-d);font-size:17px;margin-bottom:14px}
+.dl-copy p b{color:#F1E7CF;font-weight:600}
+.dl-cards{display:flex;flex-direction:column;gap:20px;position:relative}
+.dl-card{background:var(--paper);color:var(--ink);border-radius:12px;padding:26px 26px 24px;box-shadow:0 22px 50px -22px rgba(0,0,0,.55);border-top:5px solid var(--gold)}
+.dl-card .dl-tag{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.22em;font-size:11px;color:var(--gold-lo);text-transform:uppercase}
+.dl-card h3{font-size:22px;font-weight:600;margin:8px 0 6px}
+.dl-card p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.dl-btn{display:inline-flex;align-items:center;gap:10px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:13.5px;font-weight:600;text-decoration:none;padding:13px 20px;border-radius:6px;background:var(--navy);color:#F1E7CF;transition:background .18s,transform .18s;border:none;cursor:pointer}
+.dl-btn:hover{background:var(--navy-3);transform:translateY(-1px)}
+.dl-btn svg{width:16px;height:16px;flex:none}
+.dl-btn.locked{background:transparent;color:var(--muted);border:1.5px dashed rgba(20,24,33,.3);cursor:default;pointer-events:none}
+.dl-unlocked-note{display:none;margin-top:4px;font-family:'Caveat',cursive;font-size:22px;color:var(--gold-hi);transform:rotate(-1deg)}
+.dl-unlocked .dl-unlocked-note{display:block}
 
 /* ---------- kit form ---------- */
 .kit-form{margin-top:30px}
@@ -160,10 +159,6 @@ section{padding:96px 0}
 .kit-msg.ok{color:var(--gold-hi)}
 .kit-msg.err{color:#E8836B}
 .kit-fine{margin-top:10px;font-size:13px;color:var(--muted-d)}
-.light-form .kit-row input{background:var(--paper);border-color:var(--line);color:var(--ink)}
-.light-form .kit-row input::placeholder{color:var(--muted)}
-.light-form .kit-msg.ok{color:var(--gold-lo)}
-.light-form .kit-fine{color:var(--muted)}
 
 /* ---------- about ---------- */
 #about{background:var(--cream)}
@@ -209,15 +204,13 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
 /* ---------- responsive ---------- */
 @media (max-width:960px){
   .tool-grid{grid-template-columns:1fr 1fr}
-  .guide-grid,.about-grid{grid-template-columns:1fr;gap:52px}
-  .doc-visual{order:-1}
+  .dl-grid,.about-grid{grid-template-columns:1fr;gap:52px}
   .about-facts{order:2}
 }
 @media (max-width:720px){
   .navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:flex-start;gap:0;padding:10px 24px 22px;border-bottom:1px solid var(--line-d)}
   .navlinks.open{display:flex}
   .navlinks a{padding:14px 0;width:100%}
-  .navlinks .btn{margin-top:10px}
   .menu-btn{display:block}
   section{padding:72px 0}
   .tool-grid{grid-template-columns:1fr}
@@ -258,10 +251,9 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
     </a>
     <nav class="navlinks" id="navlinks">
       <a href="#tools">Free Tools</a>
-      <a href="#guide">Free Checklist</a>
+      <a href="#downloads">Free Downloads</a>
       <a href="#about">Who's Behind It</a>
       <a href="#newsletter">Newsletter</a>
-      <a class="btn btn-gold btn-nav" href="#tools">Run Your Numbers</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -289,17 +281,17 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
       <span class="eyebrow">Financial education for first responders</span>
       <h1>Know your<br>number<span class="dot">.</span></h1>
       <span class="script anno">before the job decides it for you</span>
-      <p class="lede">Your pension, <b>DROP</b>, and <b>457(b)</b> may be the biggest assets you'll ever own — and nobody at the academy explained them. Built For More turns them into plain numbers you can act on. No jargon. No sales pitch. No advisor waiting at the end.</p>
+      <p class="lede">Your pension, <b>DROP</b>, and <b>457</b> may be the biggest assets you'll ever own — and nobody at the academy explained them. Built For More turns them into plain numbers you can act on. No jargon. No sales pitch. No advisor waiting at the end.</p>
       <div class="hero-ctas">
         <a class="btn btn-gold" href="#tools">Use the Free Tools</a>
-        <a class="btn btn-ghost" href="#guide">Get the Free Checklist</a>
+        <a class="btn btn-ghost" href="#downloads">Get the Free Downloads</a>
       </div>
     </div>
   </div>
   <div class="cred">
     <div class="wrap cred-row">
       <span class="cred-item"><svg viewBox="0 0 24 24" fill="none" stroke="#D9A21B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>15 years on the job</span>
-      <span class="cred-item">Pension board trustee</span>
+      <span class="cred-item">Pension board member</span>
       <span class="cred-item">CBA negotiator</span>
       <span class="cred-item">Still riding trucks</span>
     </div>
@@ -332,11 +324,11 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
         <a class="go" data-tool="drop" href="#"><span>Run your numbers</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="tool rv">
-        <span class="plate">457(b)</span>
+        <span class="plate">457</span>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v12M8.5 9.2c0-1.3 1.5-2.2 3.5-2.2s3.5.9 3.5 2.2c0 3.2-7 2.4-7 5.6 0 1.3 1.5 2.2 3.5 2.2s3.5-.9 3.5-2.2"/></svg></div>
-        <h3>457(b) Crossover Calculator</h3>
+        <h3>457 Crossover Calculator</h3>
         <div class="hook">when does your money out-earn an OT shift?</div>
-        <p>Interest and overtime are the same money — one you worked for, one you didn't. Find the date your 457(b) growth passes a full OT shift every month, and see how raising contributions moves it closer.</p>
+        <p>Interest and overtime are the same money — one you worked for, one you didn't. Find the date your 457 growth passes a full OT shift every month, and see how raising contributions moves it closer.</p>
         <a class="go" data-tool="crossover" href="#"><span>Run your numbers</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
       </article>
     </div>
@@ -347,46 +339,49 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
   </div>
 </section>
 
-<!-- ============ FREE GUIDE ============ -->
-<section id="guide">
+<!-- ============ FREE DOWNLOADS ============ -->
+<section id="downloads">
+  <span id="guide" aria-hidden="true"></span>
   <svg class="wm" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <g transform="translate(100,100)" fill="#FCFBF8">
       <path d="M0 -95 L14 -16 L0 0 L-14 -16 Z"/><path d="M0 95 L14 16 L0 0 L-14 16 Z"/>
       <path d="M-95 0 L-16 -14 L0 0 L-16 14 Z"/><path d="M95 0 L16 -14 L0 0 L16 14 Z"/>
     </g>
   </svg>
-  <div class="wrap guide-grid">
-    <div class="guide-copy rv">
-      <span class="eyebrow">Free download</span>
-      <h2>The First Responder Retirement Checklist</h2>
-      <p>The exact items to verify before you can trust any retirement plan — beneficiary forms, pension paperwork, 457(b) settings, survivor benefits, and the deadlines that catch people off guard.</p>
-      <ul>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Why your beneficiary form overrides your will — and how to check it</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>The pension documents worth pulling before you're five years out</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>What your family needs access to if you don't come home</li>
-      </ul>
-      <form class="kit-form" data-kit aria-label="Get the free checklist">
+  <div class="wrap dl-grid">
+    <div class="dl-copy rv">
+      <span class="eyebrow">Free downloads</span>
+      <h2>Take the paperwork home</h2>
+      <p>Two documents, both free. Drop your email once and every download on this page unlocks — <b>no redirects, no hoops</b>. You'll also get the weekly Built For More newsletter.</p>
+      <form class="kit-form" data-kit data-unlock aria-label="Unlock the free downloads">
         <div class="kit-row">
           <input type="email" name="email_address" placeholder="Your best email" required autocomplete="email" aria-label="Email address">
-          <button class="btn btn-gold" type="submit">Send Me the Checklist</button>
+          <button class="btn btn-gold" type="submit">Unlock the Downloads</button>
         </div>
         <div class="kit-msg" role="status" aria-live="polite"></div>
-        <p class="kit-fine">Delivered by email. You'll also get the weekly Built For More newsletter — unsubscribe anytime.</p>
+        <p class="kit-fine">One email, every download. No spam, no selling your info — unsubscribe anytime.</p>
       </form>
+      <div class="dl-unlocked-note script">unlocked — they're all yours.</div>
     </div>
-    <div class="doc-visual rv">
-      <div class="doc" aria-hidden="true">
-        <span class="badge-free">Free</span>
-        <div class="doc-bar"></div>
-        <h4>First Responder<br>Retirement Checklist</h4>
-        <div class="doc-sub">Built For More · builtformoreusa.com</div>
-        <div class="row"><span class="box done"></span><span class="ln" style="width:78%"></span></div>
-        <div class="row"><span class="box done"></span><span class="ln" style="width:64%"></span></div>
-        <div class="row"><span class="box"></span><span class="ln" style="width:82%"></span></div>
-        <div class="row"><span class="box"></span><span class="ln" style="width:58%"></span></div>
-        <div class="row"><span class="box"></span><span class="ln" style="width:71%"></span></div>
-        <div class="row"><span class="box"></span><span class="ln" style="width:66%"></span></div>
-      </div>
+    <div class="dl-cards rv">
+      <article class="dl-card">
+        <span class="dl-tag">Checklist · 21 items</span>
+        <h3>The First Responder Retirement Checklist</h3>
+        <p>The exact items to verify before you can trust any retirement plan — beneficiary forms, pension paperwork, 457 settings, survivor benefits, and the gaps that catch people off guard.</p>
+        <a class="dl-btn locked" data-download="checklist" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+          <span>Enter your email to unlock</span>
+        </a>
+      </article>
+      <article class="dl-card">
+        <span class="dl-tag">Fillable PDF · One page</span>
+        <h3>The Family Pre-Plan</h3>
+        <p>You pre-plan every building in your first-due. This is the one for your house — where the paperwork lives, who to call first, and what benefits exist, written down before it's needed.</p>
+        <a class="dl-btn locked" data-download="preplan" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+          <span>Enter your email to unlock</span>
+        </a>
+      </article>
     </div>
   </div>
 </section>
@@ -397,13 +392,13 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
     <div class="about-copy rv">
       <span class="eyebrow">Who's behind it</span>
       <h2>Built by someone still on the job</h2>
-      <p>Built For More isn't a finance influencer or a guy who left the job to sell you a course. It's run by an <b>active-duty Florida firefighter</b> with 15 years on the job — who also sat on a pension board, negotiated collective bargaining agreements, and taught benefits classes in the department.</p>
-      <p>That matters because your benefits aren't generic. Pension multipliers, DROP rules, and 457(b) options vary by state, plan, and contract. This is education from the inside — for firefighters, law enforcement, EMS, dispatch, and corrections.</p>
+      <p>Built For More isn't a finance influencer or a guy who left the job to sell you a course. It's run by an <b>active-duty Florida firefighter</b> with 15 years on the job — who also sits on a pension board, negotiated collective bargaining agreements, and taught benefits classes in the department.</p>
+      <p>That matters because your benefits aren't generic. Pension multipliers, DROP rules, and 457 options vary by state, plan, and contract. This is education from the inside — for firefighters, law enforcement, EMS, dispatch, and corrections.</p>
       <div class="about-quote">this is not about pinching pennies forever — it's about buying the truck <u>and</u> funding the 457.</div>
     </div>
     <div class="about-facts rv">
       <div class="fact"><div class="fk">15 yrs</div><div class="fv">Active duty in the Florida fire service</div></div>
-      <div class="fact"><div class="fk">Trustee</div><div class="fv">Served on a pension board — the room where your benefit is governed</div></div>
+      <div class="fact"><div class="fk">Board</div><div class="fv">Pension board member — in the room where your benefit is governed</div></div>
       <div class="fact"><div class="fk">CBA</div><div class="fv">Negotiated the contracts that set pay and benefits</div></div>
       <div class="fact"><div class="fk">All of us</div><div class="fv">Fire, law enforcement, EMS, dispatch, corrections — not cops-only, not fire-only</div></div>
     </div>
@@ -423,7 +418,7 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
       <div class="nl-inner">
         <span class="eyebrow">The weekly email</span>
         <h2>One benefit, explained. Every week.</h2>
-        <p>A short read on pensions, DROP, 457(b), overtime strategy, and protecting your family — written in plain station language. Free, and it comes with the Retirement Checklist.</p>
+        <p>A short read on pensions, DROP, 457, overtime strategy, and protecting your family — written in plain station language. Free, and every download on this site comes with it.</p>
         <form class="kit-form" data-kit aria-label="Join the newsletter">
           <div class="kit-row">
             <input type="email" name="email_address" placeholder="Your best email" required autocomplete="email" aria-label="Email address">
@@ -470,11 +465,12 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
         <h5>Free Tools</h5>
         <a data-tool="pension" href="#">Pension Calculator</a>
         <a data-tool="drop" href="#">DROP Simulator</a>
-        <a data-tool="crossover" href="#">457(b) Crossover</a>
+        <a data-tool="crossover" href="#">457 Crossover</a>
       </div>
       <div class="foot-col">
-        <h5>Free Resources</h5>
-        <a href="#guide">Retirement Checklist</a>
+        <h5>Free Downloads</h5>
+        <a href="#downloads">Retirement Checklist</a>
+        <a href="#downloads">The Family Pre-Plan</a>
         <a href="#newsletter">Weekly Newsletter</a>
       </div>
       <div class="foot-col">
@@ -484,7 +480,7 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
     </div>
   </div>
   <div class="wrap disclaimer">
-    <p>Built For More provides financial education, not individualized financial, legal, or tax advice. Pension, DROP, and 457(b) rules vary by state, plan, and collective bargaining agreement — always verify against your own plan documents. Calculator results are estimates for education only. Not affiliated with the FRS or any retirement system.</p>
+    <p>Built For More provides financial education, not individualized financial, legal, or tax advice. Pension, DROP, and 457 rules vary by state, plan, and collective bargaining agreement — always verify against your own plan documents. Calculator results are estimates for education only. Not affiliated with the FRS or any retirement system.</p>
     <div class="copy-row">
       <span>© 2026 Built For More USA. All rights reserved.</span>
       <span>builtformoreusa.com</span>
@@ -512,43 +508,77 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
     }
   });
 
-  /* ---- Kit signup (both forms) ---- */
+  /* ---- downloads: unlock logic ---- */
+  var DL_KEY = 'bfm_downloads_unlocked';
+  function unlockDownloads(){
+    document.querySelectorAll('[data-download]').forEach(function(a){
+      var url = BFM_CONFIG.DOWNLOAD_URLS[a.dataset.download] || "";
+      if(!url) return;
+      a.href = url;
+      a.classList.remove('locked');
+      a.setAttribute('download','');
+      a.querySelector('span').textContent = 'Download the PDF';
+      a.querySelector('svg').innerHTML = '<path d="M12 3v12M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+    });
+    var sec = document.getElementById('downloads');
+    if(sec) sec.classList.add('dl-unlocked');
+    var form = document.querySelector('form[data-unlock]');
+    if(form) form.style.display = 'none';
+  }
+  try{
+    if(localStorage.getItem(DL_KEY) === '1') unlockDownloads();
+  }catch(e){}
+
+  /* ---- Kit signup (all forms) ---- */
+  function subscribe(email){
+    if(!BFM_CONFIG.KIT_FORM_ID) return Promise.reject(new Error('no-form-id'));
+    var fd = new FormData();
+    fd.append('email_address', email);
+    return fetch('https://app.kit.com/forms/' + BFM_CONFIG.KIT_FORM_ID + '/subscriptions', {
+      method:'POST', body: fd, headers:{'Accept':'application/json'}
+    }).then(function(r){ return r.json(); }).then(function(data){
+      if(data && (data.status === 'success' || data.subscription)) return data;
+      throw new Error((data && data.message) || 'signup failed');
+    });
+  }
+
   document.querySelectorAll('form[data-kit]').forEach(function(form){
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var msg = form.querySelector('.kit-msg');
       var btn = form.querySelector('button[type=submit]');
       var email = form.querySelector('input[name=email_address]').value.trim();
+      var isUnlock = form.hasAttribute('data-unlock');
       msg.className = 'kit-msg';
-      if(!BFM_CONFIG.KIT_FORM_ID){
-        if(BFM_CONFIG.KIT_LANDING_URL){
-          window.open(BFM_CONFIG.KIT_LANDING_URL, '_blank', 'noopener');
-          msg.textContent = 'Finish signing up on the page that just opened.';
-          msg.classList.add('ok');
-        }else{
-          msg.textContent = 'Signup is being set up — check back shortly.';
-          msg.classList.add('err');
-        }
-        return;
-      }
       btn.disabled = true;
       var original = btn.textContent;
       btn.textContent = 'Sending…';
-      var fd = new FormData();
-      fd.append('email_address', email);
-      fetch('https://app.kit.com/forms/' + BFM_CONFIG.KIT_FORM_ID + '/subscriptions', {
-        method:'POST', body: fd, headers:{'Accept':'application/json'}
-      }).then(function(r){ return r.json(); }).then(function(data){
-        if(data && (data.status === 'success' || data.subscription)){
-          msg.textContent = 'Check your inbox — confirm your email and the checklist is on the way.';
+
+      subscribe(email).then(function(){
+        if(isUnlock){
+          try{ localStorage.setItem(DL_KEY,'1'); }catch(err){}
+          unlockDownloads();
+        }else{
+          msg.textContent = 'You\u2019re in \u2014 check your inbox to confirm.';
           msg.classList.add('ok');
           form.querySelector('input[name=email_address]').value = '';
-        }else{
-          throw new Error((data && data.message) || 'signup failed');
         }
-      }).catch(function(){
-        msg.textContent = 'That didn\u2019t go through. Check the address and try again.';
-        msg.classList.add('err');
+      }).catch(function(err){
+        if(err && err.message === 'no-form-id'){
+          /* Form ID not configured yet — don't block the person. */
+          if(isUnlock){
+            try{ localStorage.setItem(DL_KEY,'1'); }catch(e2){}
+            unlockDownloads();
+          }else if(BFM_CONFIG.KIT_LANDING_URL){
+            window.open(BFM_CONFIG.KIT_LANDING_URL, '_blank', 'noopener');
+            msg.textContent = 'Finish signing up on the page that just opened.';
+            msg.classList.add('ok');
+          }
+          console.warn('BFM: KIT_FORM_ID is empty \u2014 emails are not being captured inline.');
+        }else{
+          msg.textContent = 'That didn\u2019t go through. Check the address and try again.';
+          msg.classList.add('err');
+        }
       }).finally(function(){
         btn.disabled = false;
         btn.textContent = original;
