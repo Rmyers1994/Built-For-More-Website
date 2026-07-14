@@ -162,15 +162,22 @@ section{padding:96px 0}
 
 /* ---------- about ---------- */
 #about{background:var(--cream)}
-.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.about-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center;margin-bottom:60px}
 .about-copy h2{font-size:clamp(32px,4.4vw,48px);font-weight:600;margin:14px 0 20px}
 .about-copy p{color:var(--muted);font-size:17px;margin-bottom:16px}
 .about-copy p b{color:var(--ink)}
-.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.fact{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:22px 22px 20px}
-.fact .fk{font-family:'Oswald',sans-serif;font-weight:600;font-size:30px;color:var(--navy);line-height:1;text-transform:uppercase}
-.fact .fv{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.45}
 .about-quote{margin-top:26px;font-family:'Caveat',cursive;font-size:27px;color:var(--gold-lo);transform:rotate(-1deg)}
+
+/* photo */
+.about-photo{position:relative;border-radius:14px;overflow:hidden;background:var(--navy);box-shadow:var(--shadow)}
+.about-photo img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover}
+.about-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:linear-gradient(90deg,var(--gold-hi),var(--gold-lo))}
+
+/* credential cards */
+.about-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fact{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:22px 20px 20px;display:flex;flex-direction:column;gap:9px}
+.fact .fk{font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;color:var(--navy);line-height:1.18;text-transform:uppercase;letter-spacing:.02em}
+.fact .fv{font-size:14.5px;color:var(--muted);line-height:1.5}
 
 /* ---------- newsletter ---------- */
 #newsletter{background:linear-gradient(180deg,var(--cream) 0%,#EFEAE0 100%);border-top:1px solid var(--line)}
@@ -204,8 +211,9 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
 /* ---------- responsive ---------- */
 @media (max-width:960px){
   .tool-grid{grid-template-columns:1fr 1fr}
-  .dl-grid,.about-grid{grid-template-columns:1fr;gap:52px}
-  .about-facts{order:2}
+  .dl-grid{grid-template-columns:1fr;gap:52px}
+  .about-grid{grid-template-columns:1fr;gap:44px;margin-bottom:44px}
+  .about-facts{grid-template-columns:1fr 1fr}
 }
 @media (max-width:720px){
   .navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:flex-start;gap:0;padding:10px 24px 22px;border-bottom:1px solid var(--line-d)}
@@ -214,6 +222,7 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
   .menu-btn{display:block}
   section{padding:72px 0}
   .tool-grid{grid-template-columns:1fr}
+  .about-facts{grid-template-columns:1fr}
   .hero-inner{padding:72px 0 64px}
   .cred-item + .cred-item{margin-left:0;width:100%}
   .cred-item + .cred-item::before{display:none}
@@ -292,7 +301,7 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
     <div class="wrap cred-row">
       <span class="cred-item"><svg viewBox="0 0 24 24" fill="none" stroke="#D9A21B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>15 years on the job</span>
       <span class="cred-item">Pension board member</span>
-      <span class="cred-item">CBA negotiator</span>
+      <span class="cred-item">Negotiation team member</span>
       <span class="cred-item">Still riding trucks</span>
     </div>
   </div>
@@ -388,20 +397,43 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
 
 <!-- ============ ABOUT ============ -->
 <section id="about">
-  <div class="wrap about-grid">
-    <div class="about-copy rv">
-      <span class="eyebrow">Who's behind it</span>
-      <h2>Built by someone still on the job</h2>
-      <p>Built For More isn't a finance influencer or a guy who left the job to sell you a course. It's run by an <b>active-duty Florida firefighter</b> with 15 years on the job — who also sits on a pension board, negotiated collective bargaining agreements, and taught benefits classes in the department.</p>
-      <p>That matters because your benefits aren't generic. Pension multipliers, DROP rules, and 457 options vary by state, plan, and contract. This is education from the inside — for firefighters, law enforcement, EMS, dispatch, and corrections.</p>
-      <div class="about-quote">this is not about pinching pennies forever — it's about buying the truck <u>and</u> funding the 457.</div>
+  <div class="wrap">
+
+    <div class="about-grid">
+      <div class="about-copy rv">
+        <span class="eyebrow">Who's behind it</span>
+        <h2>Built by someone still on the job</h2>
+        <p>Built For More isn't a finance influencer or a guy who left the job to sell you a course. It's run by an <b>active-duty firefighter and company officer</b> — someone who sits on a pension board, negotiates collective bargaining agreements, and teaches members how their benefits actually work.</p>
+        <p>That matters because your benefits aren't generic. Pension multipliers, DROP rules, and 457 options vary by state, plan, and contract. This is education from the inside — for firefighters, law enforcement, EMS, dispatch, and corrections.</p>
+        <div class="about-quote">this is not about pinching pennies forever — it's about buying the truck <u>and</u> funding the 457.</div>
+      </div>
+
+      <figure class="about-photo rv">
+        <img src="/about-firefighter.jpg"
+             alt="A firefighter in full turnout gear with arms crossed, standing in front of a burning structure, wearing a Built For More helmet shield."
+             width="1536" height="1024" loading="lazy" decoding="async">
+      </figure>
     </div>
+
     <div class="about-facts rv">
-      <div class="fact"><div class="fk">15 yrs</div><div class="fv">Active duty in the Florida fire service</div></div>
-      <div class="fact"><div class="fk">Board</div><div class="fv">Pension board member — in the room where your benefit is governed</div></div>
-      <div class="fact"><div class="fk">CBA</div><div class="fv">Negotiated the contracts that set pay and benefits</div></div>
-      <div class="fact"><div class="fk">All of us</div><div class="fv">Fire, law enforcement, EMS, dispatch, corrections — not cops-only, not fire-only</div></div>
+      <div class="fact">
+        <div class="fk">Company Officer</div>
+        <div class="fv">15 years in the fire service</div>
+      </div>
+      <div class="fact">
+        <div class="fk">Pension Board Member</div>
+        <div class="fv">In the room where the plan is governed</div>
+      </div>
+      <div class="fact">
+        <div class="fk">Negotiation Team Member</div>
+        <div class="fv">At the table for the contracts that set pay and benefits</div>
+      </div>
+      <div class="fact">
+        <div class="fk">Union Executive Board</div>
+        <div class="fv">Teaching members how their benefits actually work</div>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -534,7 +566,7 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
     if(!BFM_CONFIG.KIT_FORM_ID) return Promise.reject(new Error('no-form-id'));
     var fd = new FormData();
     fd.append('email_address', email);
-    return fetch('https://app.kit.com/forms/' + BFM_CONFIG.KIT_FORM_ID + '/subscriptions', {
+    return fetch('https://app.convertkit.com/forms/' + BFM_CONFIG.KIT_FORM_ID + '/subscriptions', {
       method:'POST', body: fd, headers:{'Accept':'application/json'}
     }).then(function(r){ return r.json(); }).then(function(data){
       if(data && (data.status === 'success' || data.subscription)) return data;
@@ -576,8 +608,15 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
           }
           console.warn('BFM: KIT_FORM_ID is empty \u2014 emails are not being captured inline.');
         }else{
-          msg.textContent = 'That didn\u2019t go through. Check the address and try again.';
-          msg.classList.add('err');
+          /* Never block a download because Kit failed. */
+          if(isUnlock){
+            try{ localStorage.setItem(DL_KEY,'1'); }catch(e3){}
+            unlockDownloads();
+            console.warn('BFM: Kit signup failed \u2014 unlocking downloads anyway.', err);
+          }else{
+            msg.textContent = 'That didn\u2019t go through. Check the address and try again.';
+            msg.classList.add('err');
+          }
         }
       }).finally(function(){
         btn.disabled = false;
