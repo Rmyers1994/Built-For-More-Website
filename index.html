@@ -26,7 +26,8 @@ const BFM_CONFIG = {
   TOOL_URLS: {
     pension:   "https://pension.builtformoreusa.com",
     drop:      "https://dropdecisioncalculator.builtformoreusa.com",
-    crossover: "https://457vsot.builtformoreusa.com"
+    crossover: "https://457vsot.builtformoreusa.com",
+    compound:  "https://compoundinterestcalculator.builtformoreusa.com"
   },
   DOWNLOAD_URLS: {
     checklist: "/retirement-checklist.pdf",
@@ -110,7 +111,7 @@ section{padding:96px 0}
 
 /* ---------- tools ---------- */
 #tools{background:var(--cream)}
-.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tool-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .tool{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:34px 30px 30px;display:flex;flex-direction:column;box-shadow:0 4px 18px -10px rgba(12,20,34,.15);transition:transform .22s,box-shadow .22s,border-color .22s}
 .tool:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(217,162,27,.5)}
 .tool::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;border-radius:14px 14px 0 0;background:linear-gradient(90deg,var(--gold-hi),var(--gold-lo));opacity:0;transition:opacity .22s}
@@ -371,6 +372,14 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
         <p>Interest and overtime are the same money — one you worked for, one you didn't. Find the date your 457 growth passes a full OT shift every month, and see how raising contributions moves it closer.</p>
         <a class="go" data-tool="crossover" href="#"><span>Run your numbers</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
       </article>
+      <article class="tool rv">
+        <span class="plate">457 Growth</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M5 20v-4h3v4"/><path d="M10.5 20v-8h3v8"/><path d="M16 20V7h3v13"/><path d="M4 8.5L9 5l3.5 2.5L18 3"/><path d="M14.5 3H18v3.5"/></svg></div>
+        <h3>457 Compound Interest Calculator</h3>
+        <div class="hook">pick your number — get the per-check plan</div>
+        <p>Project your balance year by year from what you put in each check — or work it backward: set a target like $1M by year 30 and get the exact contribution plan to hit it, with IRS limits and catch-up caps applied automatically.</p>
+        <a class="go" data-tool="compound" href="#"><span>Run your numbers</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </article>
     </div>
     <div class="privacy-note rv">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
@@ -619,6 +628,7 @@ footer{background:var(--navy);color:var(--muted-d);border-top:1px solid var(--li
         <a data-tool="pension" href="#">Pension Calculator</a>
         <a data-tool="drop" href="#">DROP Simulator</a>
         <a data-tool="crossover" href="#">457 Crossover</a>
+        <a data-tool="compound" href="#">457 Compound Calculator</a>
       </div>
       <div class="foot-col">
         <h5>Free Downloads</h5>
